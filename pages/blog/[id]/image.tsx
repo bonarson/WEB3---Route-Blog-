@@ -6,11 +6,14 @@ const BlogImage = () => {
   const router = useRouter();
   const { id } = router.query;
 
+  // Utiliser un ID fixe pour l'image
+  const fixedId = 1;
+
   return (
     <div>
       <h1>Blog {id} Image</h1>
       <Image
-        src={`/blog${id}.jpg`} // Chemin relatif à partir du répertoire public
+        src={`https://picsum.photos/200/300?random=${fixedId}`}
         alt={`Blog ${id} Image`}
         width={200}
         height={300}
